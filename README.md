@@ -31,7 +31,7 @@ MCP Client  ←→  Agent Wall Proxy  ←→  MCP Server
 
 ```bash
 # Install globally
-npm install -g agent-wall
+npm install -g @agent-wall/cli
 
 # Generate a starter policy
 agent-wall init

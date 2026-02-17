@@ -5,7 +5,7 @@ Agent Wall provides a comprehensive CLI for managing MCP server security.
 ## Installation
 
 ```bash
-npm install -g agent-wall
+npm install -g @agent-wall/cli
 ```
 
 ## Commands

@@ -7,7 +7,7 @@ Protect your Claude Code MCP servers with Agent Wall.
 ### 1. Install Agent Wall
 
 ```bash
-npm install -g agent-wall
+npm install -g @agent-wall/cli
 ```
 
 ### 2. Generate a policy

@@ -1,5 +1,5 @@
 {
-  "name": "agent-wall",
+  "name": "@agent-wall/cli",
   "version": "0.1.0",
   "description": "Security firewall for AI agents — intercept MCP tool calls, enforce policies, block attacks",
   "license": "MIT",

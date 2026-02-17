@@ -7,7 +7,7 @@ Protect your VS Code MCP servers with Agent Wall. VS Code has supported MCP sinc
 ### 1. Install Agent Wall
 
 ```bash
-npm install -g agent-wall
+npm install -g @agent-wall/cli
 ```
 
 ### 2. Generate a policy

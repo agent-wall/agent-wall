@@ -11,7 +11,7 @@
 ## Install
 
 ```bash
-npm install -g agent-wall
+npm install -g @agent-wall/cli
 ```
 
 ## Quick Start

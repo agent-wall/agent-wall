@@ -7,7 +7,7 @@ Get Agent Wall protecting your MCP servers in under 2 minutes.
 ::: code-group
 
 ```bash [npm]
-npm install -g agent-wall
+npm install -g @agent-wall/cli
 ```
 
 ```bash [pnpm]
