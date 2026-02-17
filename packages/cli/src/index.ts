@@ -39,7 +39,7 @@ program
   .description(
     "Security firewall for AI agents — intercept MCP tool calls, enforce policies, block attacks."
   )
-  .version("0.1.0");
+  .version("0.1.1");
 
 // ── wrap ─────────────────────────────────────────────────────────────
 
