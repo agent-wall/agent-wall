@@ -1,0 +1,75 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  release:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test
+
+      - name: Publish packages
+        run: |
+          publish_if_new() {
+            local dir=$1
+            cd "$dir"
+            local name=$(node -p "require('./package.json').name")
+            local version=$(node -p "require('./package.json').version")
+            local is_private=$(node -p "require('./package.json').private || false")
+
+            if [ "$is_private" = "true" ]; then
+              echo "⏭️  $name is private, skipping"
+              cd "$GITHUB_WORKSPACE"
+              return
+            fi
+
+            if npm view "$name@$version" version > /dev/null 2>&1; then
+              echo "⏭️  $name@$version already published"
+            else
+              echo "📦 Publishing $name@$version..."
+              pnpm publish --access public --no-git-checks
+            fi
+            cd "$GITHUB_WORKSPACE"
+          }
+
+          publish_if_new packages/core
+          publish_if_new packages/cli
+          # Dashboard is likely private or bundled, but if it's public uncomment below:
+          # publish_if_new packages/dashboard
+
+          echo "✅ Done!"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.AGENT_WALL_NPM_TOKEN }}
+
+      - name: GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
