@@ -1,0 +1,48 @@
+{
+  "name": "@agent-wall/core",
+  "version": "0.1.0",
+  "description": "Core proxy engine and policy evaluator for Agent Wall",
+  "license": "MIT",
+  "author": "Yalelet Dessalegn",
+  "homepage": "https://agent-wall.github.io/agent-wall/",
+  "bugs": {
+    "url": "https://github.com/agent-wall/agent-wall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agent-wall/agent-wall"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.6",
+    "js-yaml": "^4.1.0",
+    "minimatch": "^10.0.1",
+    "ws": "^8.19.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.6",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.16.4",
+    "@types/ws": "^8.18.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
