@@ -160,6 +160,9 @@ agent-wall wrap --dashboard -- npx mcp-server
 # → Dashboard at http://localhost:61100
 ```
 
+https://github.com/user-attachments/assets/5b8c2c31-acad-4418-bef6-bfb0a462d4ec
+
+
 - Live event feed with allow/deny/prompt color coding
 - Stats cards (total, forwarded, denied, attacks, scanned)
 - Attack panel grouped by category (injections, SSRF, chains)
