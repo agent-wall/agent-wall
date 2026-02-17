@@ -6,7 +6,7 @@
 
 [![CI](https://github.com/agent-wall/agent-wall/actions/workflows/ci.yml/badge.svg)](https://github.com/agent-wall/agent-wall/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![npm](https://img.shields.io/npm/v/agent-wall)](https://www.npmjs.com/package/agent-wall)
+[![npm](https://img.shields.io/npm/v/@agent-wall/cli)](https://www.npmjs.com/package/@agent-wall/cli)
 
 ## The Problem
 

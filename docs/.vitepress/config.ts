@@ -98,7 +98,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: "github", link: "https://github.com/agent-wall/agent-wall" },
-      { icon: 'npm', link: 'https://npmjs.com/package/agent-wall' },
+      { icon: 'npm', link: 'https://npmjs.com/package/@agent-wall/cli' },
     ],
 
     footer: {

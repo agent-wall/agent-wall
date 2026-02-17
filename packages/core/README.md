@@ -5,7 +5,7 @@ Core proxy engine and security modules for [Agent Wall](https://github.com/agent
 [![npm](https://img.shields.io/npm/v/@agent-wall/core)](https://www.npmjs.com/package/@agent-wall/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/agent-wall/agent-wall/blob/main/LICENSE)
 
-> **Most users should install [`agent-wall`](https://www.npmjs.com/package/agent-wall) (the CLI) instead.** This package is for programmatic usage — embedding Agent Wall into your own tools.
+> **Most users should install [`@agent-wall/cli`](https://www.npmjs.com/package/@agent-wall/cli) (the CLI) instead.** This package is for programmatic usage — embedding Agent Wall into your own tools.
 
 ## Install
 

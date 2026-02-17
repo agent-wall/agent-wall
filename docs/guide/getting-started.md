@@ -11,11 +11,11 @@ npm install -g @agent-wall/cli
 ```
 
 ```bash [pnpm]
-pnpm add -g agent-wall
+pnpm add -g @agent-wall/cli
 ```
 
 ```bash [yarn]
-yarn global add agent-wall
+yarn global add @agent-wall/cli
 ```
 
 :::
