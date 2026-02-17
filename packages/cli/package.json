@@ -1,0 +1,57 @@
+{
+  "name": "agent-wall",
+  "version": "0.1.0",
+  "description": "Security firewall for AI agents — intercept MCP tool calls, enforce policies, block attacks",
+  "license": "MIT",
+  "author": "Yalelet Dessalegn",
+  "homepage": "https://agent-wall.github.io/agent-wall/",
+  "bugs": {
+    "url": "https://github.com/agent-wall/agent-wall/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agent-wall/agent-wall"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "agent-wall": "./dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup && node -e \"const fs=require('fs'),p=require('path');const s=p.resolve(__dirname,'../dashboard/dist');const d=p.resolve(__dirname,'dist/dashboard');if(fs.existsSync(s)){fs.cpSync(s,d,{recursive:true});console.log('✓ Dashboard assets bundled')}else{console.log('⚠ Dashboard not built, skipping asset bundle')}\"",
+    "dev": "tsup --watch",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@agent-wall/core": "workspace:*",
+    "commander": "^14.0.0",
+    "chalk": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.16.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "keywords": [
+    "agent-wall",
+    "mcp",
+    "ai-security",
+    "firewall",
+    "proxy",
+    "model-context-protocol",
+    "agent-security",
+    "llm",
+    "prompt-injection"
+  ]
+}
