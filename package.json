@@ -1,0 +1,32 @@
+{
+  "name": "agent-wall",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Security firewall for AI agents. Intercepts MCP tool calls, enforces policies, blocks attacks.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agent-wall/agent-wall"
+  },
+  "homepage": "https://agent-wall.github.io/agent-wall/",
+  "bugs": {
+    "url": "https://github.com/agent-wall/agent-wall/issues"
+  },
+  "license": "MIT",
+  "author": "Yalelet Dessalegn",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "lint": "turbo lint",
+    "clean": "turbo clean",
+    "docs:dev": "pnpm --filter @agent-wall/docs dev",
+    "docs:build": "pnpm --filter @agent-wall/docs build",
+    "docs:preview": "pnpm --filter @agent-wall/docs preview"
+  },
+  "devDependencies": {
+    "turbo": "^2.8.5",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
