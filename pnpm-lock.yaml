@@ -29,9 +29,6 @@ importers:
       '@agent-wall/core':
         specifier: workspace:*
         version: link:../core
-      '@agent-wall/dashboard':
-        specifier: workspace:*
-        version: link:../dashboard
       chalk:
         specifier: ^5.4.1
         version: 5.6.2
